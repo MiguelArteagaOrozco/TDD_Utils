@@ -13,7 +13,7 @@ namespace TDDUtils.EntityFramework
 {
     public class EFMockUtils
     {
-        public static DbSet<T> GenerateDBSetubstitude<T>(IQueryable<T> source) where T:class
+        public static DbSet<T> GenerateDBSetSubstitude<T>(IQueryable<T> source) where T:class
         {
             var entityDBSet = Substitute.For<DbSet<T>, IQueryable<T>, IDbAsyncEnumerable<T>>();
 
