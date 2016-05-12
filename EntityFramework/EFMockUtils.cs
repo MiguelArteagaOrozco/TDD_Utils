@@ -23,6 +23,8 @@ namespace TDDUtils.EntityFramework
             ((IQueryable<T>)entityDBSet).Expression.Returns(source.Expression);
             ((IQueryable<T>)entityDBSet).ElementType.Returns(source.ElementType);
             ((IQueryable<T>)entityDBSet).GetEnumerator().Returns(source.GetEnumerator());
+            
+            entityDBSet.AsNoTracking().Returns(entityDBSet);
 
             return entityDBSet;
         }
